@@ -75,19 +75,19 @@ class TrendingItems extends StatelessWidget {
     try{
       if (data.containsKey("IconsPath"))
       {return data["IconsPath"]!.elementAt(index);}
-      else{return "assets/images/PosterIcons/defaultIcon.png";}
+      else{return "assets/images/TrendingImages/PosterIcons/defaultIcon.png";}
     }
     catch(ex){
-      return "assets/images/PosterIcons/defaultIcon.png";
+      return "assets/images/TrendingImages/PosterIcons/defaultIcon.png";
     }
   }
   String checkCover(Map<String, List<String>> data,int index){try{
     if (data.containsKey("CoversPath"))
     {return data["CoversPath"]!.elementAt(index);}
-    else{return "assets/images/PosterCovers/defaultCover.png";}
+    else{return "assets/images/TrendingImages/PosterCovers/defaultCover.png";}
   }
   catch(ex){
-    return"assets/images/PosterCovers/defaultCover.png";
+    return"assets/images/TrendingImages/PosterCovers/defaultCover.png";
   }}
   String checkText(Map<String, List<String>> data,int index){
     if (data.containsKey("Texts"))

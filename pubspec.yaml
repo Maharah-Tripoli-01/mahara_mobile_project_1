@@ -60,8 +60,8 @@ flutter:
 
   assets:
      - assets/images/
-     - assets/images/PosterCovers/
-     - assets/images/PosterIcons/
+     - assets/images/TrendingImages/PosterCovers/
+     - assets/images/TrendingImages/PosterIcons/
      - assets/images/MostTakenImages/
 
 
