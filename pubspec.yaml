@@ -60,7 +60,9 @@ flutter:
 
   assets:
      - assets/images/
-     - assets/icons/
+     - assets/images/PosterCovers/
+     - assets/images/PosterIcons/
+     - assets/images/MostTakenImages/
 
 
 

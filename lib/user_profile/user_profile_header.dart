@@ -32,7 +32,7 @@ class UserProfileHeader extends StatelessWidget {
           ),
         ),
         const Text(
-          'Programer',
+          'Programmer',
           style: TextStyle(
             color: Colors.black38,
           ),
