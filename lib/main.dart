@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:maharah_project/home_page/home_page_screen.dart';
 import 'package:maharah_project/user_profile/user_profile_screen.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UserProfileScreen(),
+
+      routes: {
+        HomePageScreen.route : (context) => const HomePageScreen(userName: "Abdaraheem"),
+        UserProfileScreen.route : (context) => const UserProfileScreen()
+      },
     ),
   );
 }
