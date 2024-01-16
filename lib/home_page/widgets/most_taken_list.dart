@@ -35,20 +35,7 @@ class MostTakenList extends StatelessWidget {
       ),
     );
   }
-  String checkText(Map<String, List<String>> data,int index){
-    if (data.containsKey("Texts"))
-    {return data["Texts"]!.elementAt(index);}
-    else{return "";}
-  }
 
-  String checkCover(Map<String, List<String>> data,int index){try{
-    if (data.containsKey("ImagesPath"))
-    {return data["ImagesPath"]!.elementAt(index);}
-    else{return "assets/images/MostTakenImages/defaultImage.png";}
-  }
-  catch(ex){
-    return"assets/images/MostTakenImages/defaultImage.png";
-  }
-  }
+
 }
 
