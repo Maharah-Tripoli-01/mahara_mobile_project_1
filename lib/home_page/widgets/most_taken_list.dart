@@ -9,7 +9,7 @@ class MostTakenList extends StatelessWidget {
 
     return Expanded(
       child: ListView.builder(
-        itemCount: getCount(data),
+        itemCount: data.containsKey("Texts")?data["Texts"]!.length:0,
         itemBuilder: (context, index) {
           return Container(
             height: 70,
@@ -22,12 +22,12 @@ class MostTakenList extends StatelessWidget {
                   width: 100,
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(15)),
-                    child: Image.asset(checkCover(data, index),
+                    child: Image.asset("assets/images/MostTakenImages/${data.containsKey("ImagesPath")&&data["ImagesPath"]!.length>index?data["ImagesPath"]![index]:"defaultImage.png"}",
                       fit: BoxFit.fill,
                     ),
                   ),
                 ),
-                Center(child: Text(checkText(data, index)),)
+                Center(child: Text(data["Texts"]![index]),)
               ],
             ),
           );
@@ -48,9 +48,7 @@ class MostTakenList extends StatelessWidget {
   }
   catch(ex){
     return"assets/images/MostTakenImages/defaultImage.png";
-  }}
+  }
+  }
 }
 
-int getCount(Map<String, List<String>> data) {try{
-  return data["Texts"]!.length;
-}catch(ex){return 0;}}

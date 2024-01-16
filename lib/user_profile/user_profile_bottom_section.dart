@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:maharah_project/widgets/option_tile.dart';
+import 'package:maharah_project/user_profile/widget/option_tile.dart';
 
 class UserProfileBottomSection extends StatelessWidget {
   const UserProfileBottomSection({super.key});

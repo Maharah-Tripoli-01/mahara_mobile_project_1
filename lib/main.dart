@@ -8,7 +8,7 @@ void main() {
       debugShowCheckedModeBanner: false,
 
       routes: {
-        HomePageScreen.route : (context) => const HomePageScreen(),
+        HomePageScreen.route : (context) => const HomePageScreen(userName: "Abdaraheem"),
         UserProfileScreen.route : (context) => const UserProfileScreen()
       },
     ),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:maharah_project/user_profile/user_profile_screen.dart';
-import '../widgets/MostTakenList.dart';
-import '../widgets/TrendingItems.dart';
+import 'widgets/most_taken_list.dart';
+import 'widgets/trending_list.dart';
 
 class HomePageScreen extends StatelessWidget {
   static const route = "/";
-  const HomePageScreen({super.key});
+  final String userName ;
+  const HomePageScreen({super.key, required this.userName});
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +21,10 @@ class HomePageScreen extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: MediaQuery.sizeOf(context).width / 3,
-                      child: const Text(
-                        "Hello,\nAbdaraheem",
+                      child:  Text(
+                        "Hello,\n$userName",
                         style:
-                            TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                            const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                       ),
                     ),
                     const Spacer(),
@@ -68,16 +69,17 @@ class HomePageScreen extends StatelessWidget {
                     "HTML welcome from Test 2",
                   ],
                   "CoversPath": [
-                    "assets/images/TrendingImages/PosterCovers/defaultCover.png",
-                    "assets/images/TrendingImages/PosterCovers/2.jpg",
-                    "assets/images/TrendingImages/PosterCovers/defaultCover.png",
-                    "assets/images/TrendingImages/PosterCovers/2.jpg",
+                    "defaultCover.png",
+                    "2.jpg",
+                    "defaultCover.png",
+                    "2.jpg",
                   ],
                   "IconsPath": [
-                    "assets/images/TrendingImages/PosterIcons/defaultIcon.png",
-                    "assets/images/TrendingImages/PosterIcons/html.png",
-                    "assets/images/TrendingImages/PosterIcons/gpt.png",
-                    "assets/images/TrendingImages/PosterIcons/html.png",
+                    "defaultIcon.png",
+                    "html.png",
+                    "gpt.png",
+                     "html.png",
+
                   ]
                 },
               ),
@@ -115,16 +117,16 @@ class HomePageScreen extends StatelessWidget {
                         "Basics of Logical Thinking test",
                       ],
                       "ImagesPath": [
-                        "assets/images/MostTakenImages/1.jpg",
-                        "assets/images/MostTakenImages/2.png",
-                        "assets/images/MostTakenImages/defaultImage.png",
-                        "assets/images/MostTakenImages/flutter.png",
-                        "assets/images/MostTakenImages/2.png",
-                        "assets/images/MostTakenImages/defaultImage.png",
-                        "assets/images/MostTakenImages/flutter.png",
-                        "assets/images/MostTakenImages/2.png",
-                        "assets/images/MostTakenImages/defaultImage.png",
-                        "assets/images/MostTakenImages/flutter.png",
+                        "1.jpg",
+                        "2.png",
+                        "defaultImage.png",
+                        "flutter.png",
+                        "2.png",
+                        "defaultImage.png",
+                        "flutter.png",
+                        "2.png",
+                        "defaultImage.png",
+                        "flutter.png",
                       ]
                     },
                   ),
