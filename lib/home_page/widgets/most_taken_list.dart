@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class MostTakenList extends StatelessWidget {
   final Map<String, List<String>> data;
   const MostTakenList({super.key , required this.data});
-
+  static const String imagesPath = "assets/images/MostTakenImages/";
   @override
   Widget build(BuildContext context) {
 
     return Expanded(
       child: ListView.builder(
-        itemCount: data.containsKey("Texts")?data["Texts"]!.length:0,
+        itemCount: data["Texts"]?.length??0,
         itemBuilder: (context, index) {
           return Container(
             height: 70,
@@ -22,7 +22,7 @@ class MostTakenList extends StatelessWidget {
                   width: 100,
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(15)),
-                    child: Image.asset("assets/images/MostTakenImages/${data.containsKey("ImagesPath")&&data["ImagesPath"]!.length>index?data["ImagesPath"]![index]:"defaultImage.png"}",
+                    child: Image.asset("$imagesPath${data.containsKey("ImagesPath")&&data["ImagesPath"]!.length>index?data["ImagesPath"]![index]:"defaultImage.png"}",
                       fit: BoxFit.fill,
                     ),
                   ),

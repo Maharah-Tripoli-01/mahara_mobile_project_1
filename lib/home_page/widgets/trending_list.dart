@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class TrendingItems extends StatelessWidget {
   final Map<String, List<String>> data;
-
+final posterCoversPath= "assets/images/TrendingImages/PosterCovers/" ;
+final posterIconsPath= "assets/images/TrendingImages/PosterIcons/";
   const TrendingItems({super.key, required this.data});
 
   @override
@@ -15,7 +16,7 @@ class TrendingItems extends StatelessWidget {
       height: 160,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: data.containsKey("Texts") ? data["Texts"]!.length : 0,
+        itemCount: data["Texts"]?.length??0,
         itemBuilder: (context, int index) {
           return Stack(
             children: [
@@ -28,7 +29,7 @@ class TrendingItems extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius:
                       const BorderRadius.vertical(top: Radius.circular(15)),
-                      child: Image.asset("assets/images/TrendingImages/PosterCovers/${data.containsKey("CoversPath")&&data["CoversPath"]!.length>index?data["CoversPath"]![index]:"defaultCover.png"}",
+                      child: Image.asset("$posterCoversPath${data.containsKey("CoversPath")&&data["CoversPath"]!.length>index?data["CoversPath"]![index]:"defaultCover.png"}",
                         fit: BoxFit.fill,),
                     ),
                   ),
@@ -60,7 +61,7 @@ class TrendingItems extends StatelessWidget {
                       borderRadius: BorderRadius.circular(40), // Image border
                       child: SizedBox.fromSize(
                         size: const Size.square(45), // Image radius
-                        child: Image.asset("assets/images/TrendingImages/PosterIcons/${data.containsKey("IconsPath")&&data["IconsPath"]!.length>index?data["IconsPath"]![index]:"defaultIcon.png"}",
+                        child: Image.asset("$posterCoversPath${data.containsKey("IconsPath")&&data["IconsPath"]!.length>index?data["IconsPath"]![index]:"defaultIcon.png"}",
                             fit: BoxFit.cover),
                       ),
                     ),
