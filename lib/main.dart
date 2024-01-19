@@ -1,11 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:maharah_project/user_profile/user_profile_screen.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:maharah_project/models/course_details_model.dart';
+import 'package:maharah_project/ui/app.dart';
 
 void main() {
-  runApp(
-    const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: UserProfileScreen(),
-    ),
-  );
+  runApp(const MyApp());
 }
